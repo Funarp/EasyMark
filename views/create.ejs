@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS  -->
+    <!--link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" /-->
+    <link rel="stylesheet" href="css/editor/style.css" />
+    <link rel="stylesheet" href="css/editor/editormd.css" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+
+
+    <!--JS-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/editor/editormd.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="test-editor">
+        <textarea style="display:none;"></textarea>
+    </div>
+</body>
+
+<script type="text/javascript">
+    var testEditor;
+
+    $(function() {
+        testEditor = editormd("test-editor", {
+            width: "100%",
+            height: 640,
+            syncScrolling: "single",
+            path: "js/editor/lib/"
+        });
+
+        /*
+        // or
+        testEditor = editormd({
+            id      : "test-editormd",
+            width   : "90%",
+            height  : 640,
+            path    : "../lib/"
+        });
+        */
+    });
+</script>
+
+</html>
