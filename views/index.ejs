@@ -2,107 +2,107 @@
 <html>
 
 <head>
-  <title><%= title %> - Welcome</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        <%= title %> - Welcome</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.js"></script>
 </head>
 
 <body>
-  <ul id="dropdown1" class="dropdown-content">
-    <li>
-      <a href="#!">Admin</a>
-    </li>
-    <li>
-      <a href="#!">Donate</a>
-    </li>
-  </ul>
-
-  <nav class="nav-extended light-blue darken-3" style="background-image: url('img/back.png');">
-    <div class="nav-wrapper container">
-      <a class="brand-logo">EasyMark</a>
-      <ul class="right hide-on-med-and-down">
+    <ul id="dropdown1" class="dropdown-content">
         <li>
-          <a class="dropdown-button light-blue" href="#!" data-activates="dropdown1">Menu
+            <a href="#!">Admin</a>
+        </li>
+        <li>
+            <a href="#!">Donate</a>
+        </li>
+    </ul>
+
+    <nav class="nav-extended light-blue darken-3" style="background-image: url('img/back.png');">
+        <div class="nav-wrapper container">
+            <a class="brand-logo">EasyMark</a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a class="dropdown-button light-blue" href="#!" data-activates="dropdown1">Menu
             <i class="material-icons left">menu</i>
           </a>
-        </li>
-      </ul>
-      <script>
-        $('.dropdown-button').dropdown('open');
-      </script>
-    </div>
-
-    <div class="nav-header center">
-      <h1 class="white-text">EasyMark</h1>
-      <h5 class="white-text">An easy way to mark down your blog</h5>
-      <a href="#" id="download-button" class="btn-large waves-effect waves-light orange accent-3">Get Started</a>
-      <br></br>
-    </div>
-  </nav>
-  <script>
-    $(document).ready(function () {
-      $('.parallax').parallax();
-    });
-  </script>
-
-  <div class="container">
-    <div class="section">
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text">
-              <i class="material-icons">flash_on</i>
-            </h2>
-            <h5 class="center">Speeds up development</h5>
-
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components.
-              Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
-          </div>
+                </li>
+            </ul>
+            <script>
+                $('.dropdown-button').dropdown('open');
+            </script>
         </div>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text">
-              <i class="material-icons">group</i>
-            </h2>
-            <h5 class="center">User Experience Focused</h5>
-
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates
-              components and animations that provide more feedback to users. Additionally, a single underlying responsive
-              system across all platforms allow for a more unified user experience.</p>
-          </div>
+        <div class="nav-header center">
+            <h1 class="white-text">EasyMark</h1>
+            <h5 class="white-text">An easy way to mark down your blog</h5>
+            <a href="#" id="download-button" class="btn-large waves-effect waves-light orange accent-3">Get Started</a>
+            <br></br>
         </div>
+    </nav>
+    <script>
+        $(document).ready(function() {
+            $('.parallax').parallax();
+        });
+    </script>
 
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text">
-              <i class="material-icons">settings</i>
-            </h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are
-              also always open to feedback and can answer any questions a user may have about Materialize.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</body>
-<footer class="page-footer blue darken-1">
-  <div class="footer-copyright">
     <div class="container">
-      Made by<a class="brown-text text-lighten-3" href="#">Funarp</a>
+        <div class="section">
+            <!--   Icon Section   -->
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text">
+                            <i class="material-icons">flash_on</i>
+                        </h2>
+                        <h5 class="center">Speeds up development</h5>
+
+                        <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text">
+                            <i class="material-icons">group</i>
+                        </h2>
+                        <h5 class="center">User Experience Focused</h5>
+
+                        <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across
+                            all platforms allow for a more unified user experience.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="icon-block">
+                        <h2 class="center brown-text">
+                            <i class="material-icons">settings</i>
+                        </h2>
+                        <h5 class="center">Easy to work with</h5>
+
+                        <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-  </div>
-</footer>
+    <footer class="page-footer blue darken-1">
+        <div class="footer-copyright">
+            <div class="container">
+                Made by<a class="brown-text text-lighten-3" href="#"> Funarp</a>
+            </div>
+        </div>
+    </footer>
+</body>
 
 </html>
