@@ -28,7 +28,7 @@
         <textarea style="display:none;"></textarea>
     </div>
     <a class="waves-effect waves-light btn left" id="down-md" download="*.md"><i class="material-icons left">file_download</i>Download MD</a>
-    <a class="waves-effect waves-light red btn left" id="preview"><i class="material-icons left">tab</i>Preview in new tab</a>
+    <a class="waves-effect waves-light green btn left" id="preview"><i class="material-icons left">tab</i>Preview in new tab</a>
     <a class="waves-effect waves-light red btn left" id="down-pdf"><i class="material-icons left">picture_as_pdf</i>Download PDF</a>
     <a class="waves-effect waves-light indigo btn left" id="down-pic"><i class="material-icons left">photo</i>Convert to Pic</a>
 </body>
@@ -79,7 +79,7 @@
     $(document).ready(function() {
         AutoSave.start();
     })
-    $(window).unload(function() {
+    $(window).on('beforeunload', function() {
         AutoSave.stop();
     });
 
