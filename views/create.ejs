@@ -17,6 +17,7 @@
 
     <!--JS-->
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/editor/autosave.js"></script>
     <script type="text/javascript" src="js/editor/editormd.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
@@ -73,6 +74,13 @@
             }
 
         });
+    });
+
+    $(document).ready(function() {
+        AutoSave.start();
+    })
+    $(window).unload(function() {
+        AutoSave.stop();
     });
 
     document.getElementById("down-md").onclick = function() {
