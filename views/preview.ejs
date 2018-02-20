@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="../css/editor/style.css" />
+    <link rel="stylesheet" href="../css/editor/editormd.preview.css" />
+
+    <style>
+        .editormd-html-preview {
+            width: 90%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="layout">
+        <div id="test-editormd-view">
+            <textarea style="display:none;" name="test-editormd-markdown-doc"><%= md %></textarea>
+        </div>
+    </div>
+
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/editor/lib/marked.min.js"></script>
+    <script src="../js/editor/lib/prettify.min.js"></script>
+
+    <script src="../js/editor/lib/raphael.min.js"></script>
+    <script src="../js/editor/lib/underscore.min.js"></script>
+    <script src="../js/editor/lib/sequence-diagram.min.js"></script>
+    <script src="../js/editor/lib/flowchart.min.js"></script>
+    <script src="../js/editor/lib/jquery.flowchart.min.js"></script>
+
+    <script src="../js/editor/editormd.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var testEditormdView = editormd.markdownToHTML("test-editormd-view", {
+                htmlDecode: "style,script,iframe", // you can filter tags decode
+                emoji: true,
+                taskList: true,
+                tex: true, // 默认不解析
+                flowChart: true, // 默认不解析
+                sequenceDiagram: true, // 默认不解析
+            });
+        });
+        <%= action %>
+    </script>
+
+</body>

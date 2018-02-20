@@ -16,7 +16,7 @@
     <link href="css/materialize.md.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
     <!--JS-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/editor/editormd.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
 
@@ -27,6 +27,7 @@
         <textarea style="display:none;"></textarea>
     </div>
     <a class="waves-effect waves-light btn left" id="down-md" download="*.md"><i class="material-icons left">file_download</i>Download MD</a>
+    <a class="waves-effect waves-light red btn left" id="preview"><i class="material-icons left">tab</i>Preview in new tab</a>
     <a class="waves-effect waves-light red btn left" id="down-pdf"><i class="material-icons left">picture_as_pdf</i>Download PDF</a>
     <a class="waves-effect waves-light indigo btn left" id="down-pic"><i class="material-icons left">photo</i>Convert to Pic</a>
 </body>
@@ -78,6 +79,43 @@
         var md = testEditor.getMarkdown();
         this.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(md);
     };
+    document.getElementById("preview").onclick = function() {
+        var md = testEditor.getMarkdown();
+        var data = {
+            md: md,
+            act: 'preview'
+        };
+        Post(data);
+    };
+    document.getElementById("down-pdf").onclick = function() {
+        var md = testEditor.getMarkdown();
+        var data = {
+            md: md,
+            act: 'pdf'
+        };
+        Post(data);
+    };
+
+    function Post(data) {
+        url = "/create/preview"
+        var form = document.createElement("form");
+        form.target = "_blank";
+        form.method = "POST";
+        form.action = url;
+        form.style.display = "none";
+
+        for (var key in data) {
+            var input = document.createElement("input");
+            input.type = "hidden";
+            input.name = key;
+            input.value = data[key];
+            form.appendChild(input);
+        }
+
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+    }
 </script>
 
 </html>
