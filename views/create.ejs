@@ -12,11 +12,8 @@
     <!--link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" /-->
     <link rel="stylesheet" href="css/editor/style.css" />
     <link rel="stylesheet" href="css/editor/editormd.css" />
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.md.css" type="text/css" rel="stylesheet" media="screen,projection" />
-
-
 
     <!--JS-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -26,10 +23,12 @@
 </head>
 
 <body>
-
     <div id="test-editor">
         <textarea style="display:none;"></textarea>
     </div>
+    <a class="waves-effect waves-light btn left" id="down-md" download="*.md"><i class="material-icons left">file_download</i>Download MD</a>
+    <a class="waves-effect waves-light red btn left" id="down-pdf"><i class="material-icons left">picture_as_pdf</i>Download PDF</a>
+    <a class="waves-effect waves-light indigo btn left" id="down-pic"><i class="material-icons left">photo</i>Convert to Pic</a>
 </body>
 
 <script type="text/javascript">
@@ -73,17 +72,12 @@
             }
 
         });
-
-        /*
-        // or
-        testEditor = editormd({
-            id      : "test-editormd",
-            width   : "90%",
-            height  : 640,
-            path    : "../lib/"
-        });
-        */
     });
+
+    document.getElementById("down-md").onclick = function() {
+        var md = testEditor.getMarkdown();
+        this.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(md);
+    };
 </script>
 
 </html>
