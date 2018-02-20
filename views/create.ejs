@@ -95,6 +95,14 @@
         };
         Post(data);
     };
+    document.getElementById("down-pic").onclick = function() {
+        var md = testEditor.getMarkdown();
+        var data = {
+            md: md,
+            act: 'pic'
+        };
+        Post(data);
+    };
 
     function Post(data) {
         url = "/create/preview"

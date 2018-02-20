@@ -14,7 +14,9 @@ router.post('/preview', urlencodedParser, function(req, res, next) {
     var act = req.body.act;
     if (act === "pdf") {
         res.render('preview', { title: 'Preview - EasyMark', md: md, action: "window.print()" });
-    } else {
+    } else if (act === "pic") {
+        res.render('preview', { title: 'Preview - EasyMark', md: md, action: "generate()" });
+    } else if (act === "preview") {
         res.render('preview', { title: 'Preview - EasyMark', md: md, action: "" });
     }
 });
